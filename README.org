@@ -1,1 +1,4 @@
 * What this is about
+  | column       | another |
+  |--------------+---------|
+  | testing some | tables  |
