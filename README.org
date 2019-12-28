@@ -1,7 +1,7 @@
 * Pre-IB computer science project
 ** Short overview
    - The project allows you to increase your final grade by a maximum
-     of 3 grades (maximum level three in grading levels below)
+     of 3 grades (maximum level 3 in grading levels below)
    - Your program must process text data in a meaningful way, but the
      end result does not have to be a real-life application.
    - Grading is based on
@@ -17,11 +17,11 @@
      - one ~.zip~-archive, or
      - a link to a GitHub repository containing all files.
 ** Grading levels
-*** Criteria for level one
+*** Criteria for level 1
 **** Specification
      - There is a sensible specification of what the program does.
-     - The program is specified to take some input, either from user
-       or from a text data file.
+     - The program reads some input from user and/or from a text data
+       file.
      - All required text data files, if any, are supplied.
 **** Correctness
      The program works correctly in three documented test cases.
@@ -31,7 +31,7 @@
 **** Readability
      - Program code is correctly indented.
      - Correct amount of whitespace is used to enhance readability.
-*** Additional criteria for level two
+*** Additional criteria for level 2
 **** Correctness
      The correct working of the program has been documented in a
      variety of cases.
@@ -42,11 +42,76 @@
      - Code is well-organized, using functions and/or classes whenever
        necessary.
      - The most complex part of the code is explained with a comment.
-*** Additional criteria for level three
+*** Additional criteria for level 3
 **** Correctness
-     The correct working of the program has been documented in /all/
-     possible cases except for the computer running out of memory.
+     - The correct working of the program has been documented in /all/
+       possible cases except for the computer running out of memory.
+     - Documentation explains how needed resources are freed when no
+       longer needed.
 **** Readability
      - All non-trivial parts of the code are commented.
-     - The role and functioning of all functions and/or classes are
+     - The role and operation of all functions and/or classes are
        explained in comments.
+** Example
+*** Specification
+    - The program
+      1. reads data about persons from a file
+      2. finds persons with identical first names
+      3. prints data of persons with identical names on consecutive
+         rows.
+    - The input data text file consists of rows, each row containing
+      #+begin_quote
+      lastname firstname address
+      #+end_quote
+    - The user supplies the name of the input file either as a program
+      argument, or if none is given, from keyboard.
+*** Code
+    #+begin_src java :exports code :tangle yes
+      import java.util.Scanner;
+
+      class NamesakeFinder
+      {
+        // class containing information of person and converting info to
+        // string
+        class Person
+        {
+          public Person (String firstname, String lastname, String address)
+          {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.address = address;
+          }
+
+          public String toString ()
+          {
+            return firstname + lastname + address;
+          }
+
+          public String firstname, lastname, address;
+        }
+
+        public static void main (String[] args)
+        {
+          String filename;
+
+          // if the number of arguments is more than 1, we just use the
+          // first one as the filename
+          if (args.length >= 1)
+            filename = args [0];
+          else
+          {
+            // query filename
+            try (Scanner scanner = new Scanner (System.in))
+            {
+              System.out.print ("give data file name: ");
+              filename = scanner.next ();
+            }
+            catch (Exception e)
+            {
+              System.out.println ("unable to read data file name, exception " + e);
+              return;
+            }
+          }
+        }
+      }
+    #+end_src
