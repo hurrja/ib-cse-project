@@ -5,18 +5,39 @@
    - The program you write must process text data in a meaningful way,
      but the end result does not have to be a real-life application.
    - Grading is based on
-     - problem specification
+     - program specification
      - program correctness
      - readability of code.
    - Your submission consists of
      - one document with problem specification and description of test
        cases
      - one ~.java~-file containing the code
-     - possibly one or more data files.
+     - possibly one or more text data files.
 ** Grading levels
-*** One
+*** Criteria for level one
 **** Specification
      There is a sensible specification of what the program does.
 **** Correctness
      The program works correctly in three documented test cases.
-     - First is a basic case 
+     - First is a basic case with typical data.
+     - Two other are special cases that the program is able to handle
+       correctly (for example, empty data file, or incorrect input).
+**** Readability
+     - Program code is correctly indented.
+     - Correct amount of whitespace to enhance readability.
+*** Additional criteria for level two
+**** Readability
+     - Constants are identified and named appropriately.
+     - Code is well-organized, using functions and/or classes whenever
+       necessary.
+     - Names of constants, variables and functions are appropriate
+       (make sense).
+     - The most complex part of the code is explained with a comment.
+*** Additional criteria for level three
+**** Correctness
+     The correct working of the program has been documented in all
+     possible cases except for the computer running out of memory.
+**** Readability
+     - All non-trivial parts of the code are commented.
+     - The role and functioning of all functions and/or classes are
+       explained in comments.
