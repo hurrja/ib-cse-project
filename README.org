@@ -1,9 +1,9 @@
 * Pre-IB computer science project
 ** Short overview
    - The project allows you to increase your final grade by a maximum
-     of 3 grades.
-   - The program you write must process text data in a meaningful way,
-     but the end result does not have to be a real-life application.
+     of 3 grades (maximum level three in grading levels below)
+   - Your program must process text data in a meaningful way, but the
+     end result does not have to be a real-life application.
    - Grading is based on
      - program specification
      - program correctness
@@ -13,10 +13,16 @@
        cases
      - one ~.java~-file containing the code
      - possibly one or more text data files.
+   - Submission is made via email by providing either
+     - one ~.zip~-archive, or
+     - a link to a GitHub repository containing all files.
 ** Grading levels
 *** Criteria for level one
 **** Specification
-     There is a sensible specification of what the program does.
+     - There is a sensible specification of what the program does.
+     - The program is specified to take some input, either from user
+       or from a text data file.
+     - All required text data files, if any, are supplied.
 **** Correctness
      The program works correctly in three documented test cases.
      - First is a basic case with typical data.
@@ -24,18 +30,21 @@
        correctly (for example, empty data file, or incorrect input).
 **** Readability
      - Program code is correctly indented.
-     - Correct amount of whitespace to enhance readability.
+     - Correct amount of whitespace is used to enhance readability.
 *** Additional criteria for level two
+**** Correctness
+     The correct working of the program has been documented in a
+     variety of cases.
 **** Readability
-     - Constants are identified and named appropriately.
-     - Code is well-organized, using functions and/or classes whenever
-       necessary.
+     - Constants are identified and named.
      - Names of constants, variables and functions are appropriate
        (make sense).
+     - Code is well-organized, using functions and/or classes whenever
+       necessary.
      - The most complex part of the code is explained with a comment.
 *** Additional criteria for level three
 **** Correctness
-     The correct working of the program has been documented in all
+     The correct working of the program has been documented in /all/
      possible cases except for the computer running out of memory.
 **** Readability
      - All non-trivial parts of the code are commented.
