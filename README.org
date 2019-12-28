@@ -67,31 +67,15 @@
       argument, or if none is given, from keyboard.
 *** Code
     #+begin_src java :exports code :tangle yes
+      import java.io.File;
+      import java.io.FileReader;
       import java.util.Scanner;
 
       class NamesakeFinder
       {
-        // class containing information of person and converting info to
-        // string
-        class Person
-        {
-          public Person (String firstname, String lastname, String address)
-          {
-            this.firstname = firstname;
-            this.lastname = lastname;
-            this.address = address;
-          }
-
-          public String toString ()
-          {
-            return firstname + lastname + address;
-          }
-
-          public String firstname, lastname, address;
-        }
-
         public static void main (String[] args)
         {
+          final int MAX_NUM_PERSONS = 1000;
           String filename;
 
           // if the number of arguments is more than 1, we just use the
@@ -112,6 +96,81 @@
               return;
             }
           }
+
+          // read persons into an array
+          Person[] persons = new Person [MAX_NUM_PERSONS];
+          int numPersons = 0;
+
+          // open file and create a scanner for it
+          try (FileReader dataFileReader = new FileReader (new File (filename));
+               Scanner scanner = new Scanner (dataFileReader))
+          {
+            try
+            {
+              while (scanner.hasNextLine ())
+              {
+                if (numPersons > MAX_NUM_PERSONS)
+                {
+                  System.out.println ("exceeded maximum number of persons " + MAX_NUM_PERSONS);
+                  return;
+                }
+
+                String lastname = scanner.next ();
+                String firstname = scanner.next ();
+                String address = scanner.nextLine ();
+                persons [numPersons] = new Person (lastname, firstname, address);
+                numPersons = numPersons + 1;
+              }
+            }
+            catch (Exception e)
+            {
+              System.out.println ("unable to read person data, exception " + e);
+              return;
+            }
+          }
+          catch (Exception e)
+          {
+            System.out.println ("unable to open file " + filename + " for reading, exception : " + e);
+            return;
+          }
+
+          for (int personInd = 0; personInd < numPersons; personInd = personInd + 1)
+          {
+            Person person = persons [personInd];
+            if (person != null)
+            {
+              System.out.println (person);
+              for (int namesakeInd = personInd + 1; namesakeInd < numPersons; namesakeInd = namesakeInd + 1)
+              {
+                Person namesakeCandidate = persons [namesakeInd];
+                if (namesakeCandidate != null && person.firstname.equals (namesakeCandidate.firstname))
+                {
+                  System.out.println (namesakeCandidate);
+                  persons [namesakeInd] = null;
+                }
+              }
+            }
+          }
         }
       }
+
+      // class containing information of person and converting info to
+      // string
+      class Person
+      {
+        public Person (String lastname, String firstname, String address)
+        {
+          this.lastname = lastname;
+          this.firstname = firstname;
+          this.address = address;
+        }
+
+        public String toString ()
+        {
+          return lastname + " " + firstname + " " + address;
+        }
+
+        public String firstname, lastname, address;
+      }
+
     #+end_src
