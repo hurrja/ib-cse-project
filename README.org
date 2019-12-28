@@ -1,4 +1,6 @@
-* What this is about
-  | column       | another |
-  |--------------+---------|
-  | testing some | tables  |
+#+title: How does this show up in readme?
+
+* Pre-IB computer science project
+   | column       | another |
+   |--------------+---------|
+   | testing some | tables  |
