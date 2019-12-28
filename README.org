@@ -143,7 +143,7 @@
               for (int namesakeInd = personInd + 1; namesakeInd < numPersons; namesakeInd = namesakeInd + 1)
               {
                 Person namesakeCandidate = persons [namesakeInd];
-                if (namesakeCandidate != null && person.firstname.equals (namesakeCandidate.firstname))
+                if (namesakeCandidate != null && person.isNamesake (namesakeCandidate))
                 {
                   System.out.println (namesakeCandidate);
                   persons [namesakeInd] = null;
@@ -165,6 +165,11 @@
           this.address = address;
         }
 
+        public boolean isNamesake (Person person)
+        {
+          return firstname.equals (person.firstname);
+        }
+  
         public String toString ()
         {
           return lastname + " " + firstname + " " + address;
