@@ -85,7 +85,7 @@
        =lastname firstname address=
        #+end_center
        Both ~lastname~ and ~firstname~ are single words, while
-       ~address~ is all the remaining text in the line.
+       ~address~ is all the remaining text on the line.
 **** Correctness and exception handling
 ***** Typical test case
       File [[file:persons.txt]] contains data from 6 persons with 3 groups
@@ -97,7 +97,8 @@
       java NamesakeListing.java persons.txt
       #+end_src
 
-      the output is
+      the output is correct, with each group of namesakes printed on
+      consecutive lines:
 
       #+RESULTS: run-application
       : Money Michael Las Vegas US
@@ -130,7 +131,7 @@
       - ~FileReader~ and the associated ~Scanner~ when reading data
         file.
 
-*** Code
+*** Program code (provided here just for ease of reading, would be a separate file in your submission)
     #+begin_src java :exports code :tangle NamesakeListing.java
       import java.io.File;
       import java.io.FileReader;
@@ -140,7 +141,8 @@
       {
         public static void main (String[] args)
         {
-          final int MAX_NUM_PERSONS = 6;
+          // maximum number of persons this program can handle
+          final int MAX_NUM_PERSONS = 1000;
 
           // get name of data file
           String filename;
@@ -193,6 +195,7 @@
               // read while there are lines in the file
               while (scanner.hasNextLine ())
               {
+                // report error and exit if program limit exceeded
                 if (numPersons > persons.length)
                 {
                   System.out.println ("exceeded maximum number of persons " + persons.length);
@@ -245,7 +248,7 @@
                 if (candidate != null && person.isNamesake (candidate))
                 {
                   System.out.println (candidate);
-                  persons [candInd] = null;
+                  persons [candInd] = null; // set to null, since the person has been printed
                 }
               }
             }
@@ -254,8 +257,7 @@
       }
 
 
-      // class containing information of person and converting info to
-      // string
+      // class containing information of person and helpful methods
       class Person
       {
         public Person (String lastname, String firstname, String address)
@@ -265,6 +267,7 @@
           this.address = address;
         }
 
+        // method for testing whether another person is a namesake
         public boolean isNamesake (Person person)
         {
           return firstname.equals (person.firstname);
@@ -277,7 +280,7 @@
           return lastname + " " + firstname + address;
         }
 
-        public String firstname, lastname, address;
+        public String firstname, lastname, address; // member variables
       }
 
     #+end_src

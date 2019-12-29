@@ -6,7 +6,8 @@ class NamesakeListing
 {
   public static void main (String[] args)
   {
-    final int MAX_NUM_PERSONS = 6;
+    // maximum number of persons this program can handle
+    final int MAX_NUM_PERSONS = 1000;
 
     // get name of data file
     String filename;
@@ -59,6 +60,7 @@ class NamesakeListing
         // read while there are lines in the file
         while (scanner.hasNextLine ())
         {
+          // report error and exit if program limit exceeded
           if (numPersons > persons.length)
           {
             System.out.println ("exceeded maximum number of persons " + persons.length);
@@ -111,7 +113,7 @@ class NamesakeListing
           if (candidate != null && person.isNamesake (candidate))
           {
             System.out.println (candidate);
-            persons [candInd] = null;
+            persons [candInd] = null; // set to null, since the person has been printed
           }
         }
       }
@@ -120,8 +122,7 @@ class NamesakeListing
 }
 
 
-// class containing information of person and converting info to
-// string
+// class containing information of person and helpful methods
 class Person
 {
   public Person (String lastname, String firstname, String address)
@@ -131,6 +132,7 @@ class Person
     this.address = address;
   }
 
+  // method for testing whether another person is a namesake
   public boolean isNamesake (Person person)
   {
     return firstname.equals (person.firstname);
@@ -143,5 +145,5 @@ class Person
     return lastname + " " + firstname + address;
   }
 
-  public String firstname, lastname, address;
+  public String firstname, lastname, address; // member variables
 }
