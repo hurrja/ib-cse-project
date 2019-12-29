@@ -1,21 +1,21 @@
 * Pre-IB computer science project
-** Short overview
+** Overview
    - The project allows you to increase your final grade by a maximum
      of 3 grades (maximum level 3 in grading levels below)
-   - Your program must process text data in a meaningful way, but the
-     end result does not have to be a real-life application.
+   - Your program must process text data in a meaningful way, but you
+     should not strive for a real-world application.
    - Grading is based on
      - specification
      - correctness and exception handling
      - code clarity
      - resource management.
    - Your submission consists of
-     - one file containing documentation:
-       - your target assessment level (1, 2 or 3)
+     - one file containing documentation
+       - your target grade level (1, 2 or 3)
        - specification
-       - format of input
        - test case with typical input
-       - explanation of exception handling (levels 2 and 3)
+       - explanation of how exceptions and special cases are handled
+         (levels 2 and 3)
        - explanation of resource handling (level 3)
      - one ~.java~-file containing the code
      - possibly one or more text data files needed for the test case.
@@ -30,7 +30,7 @@
 **** Specification
      - There is a sensible description of what the program does.
      - The program reads some input from user and/or from a text data
-       file.
+       file and performs a meaningful operation on these.
      - Format of input is explained clearly.
 **** Correctness and exception handling
      - The program works correctly in one documented test case with
@@ -51,7 +51,7 @@
      - Constants are identified and named.
      - The flow of the program is split into meaningful functions
        called by ~main()~.
-     - The operation of defined functions is explained in comments.
+     - The role of defined functions is explained in comments.
 *** Additional criteria for level 3
 **** Correctness and exception handling
      - The correct working of the program has been documented in all
@@ -62,9 +62,10 @@
      - At least one resource is closed when no longer needed, even in
        the case of an exception. This is also documented.
 **** Code clarity
-     - All non-trivial parts of the code are commented.
-     - If appropriate, classes are defined for program-specific data
-       types.
+     - All non-trivial parts of the code are
+       commented. \ldquo{}Non-trivial\rdquo is defined by assuming
+       that the reader is a fellow student.
+     - If useful, classes are defined for program-specific data types.
 ** Example project
 *** Documentation
 **** Target assessment level
