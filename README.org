@@ -5,9 +5,10 @@
    - Your program must process text data in a meaningful way, but the
      end result does not have to be a real-life application.
    - Grading is based on
-     - program specification
-     - program correctness
-     - readability of code.
+     - specification
+     - correctness and exception handling
+     - code clarity
+     - resource management.
    - Your submission consists of
      - one document with problem specification and description of test
        cases
@@ -23,32 +24,33 @@
      - The program reads some input from user and/or from a text data
        file.
      - All required text data files, if any, are supplied.
-**** Correctness
-     The program works correctly in three documented test cases.
-     - First is a basic case with typical data.
-     - Two other are special cases that the program is able to handle
-       correctly (for example, empty data file, or incorrect input).
-**** Readability
-     - Program code is correctly indented.
-     - Correct amount of whitespace is used to enhance readability.
+**** Correctness and exception handling
+     The program works correctly in one documented test case with
+     typical input.
+**** Code clarity
+     - Code is correctly indented.
+     - There is no unnecessary whitespace (no extra empty lines or
+       extra spaces).
+     - Identifiers (names of variables, constants and functions) are
+       meaningful in the context of the program.
 *** Additional criteria for level 2
-**** Correctness
-     The correct working of the program has been documented in a
-     variety of cases.
-**** Readability
+**** Correctness and exception handling
+     - At least one exception is caught and reported correctly, and
+       this is documented (explained in document).
+**** Code clarity
      - Constants are identified and named.
-     - Names of constants, variables and functions are appropriate
-       (make sense).
-     - Code is well-organized, using functions and/or classes whenever
-       necessary.
+     - A meaningful function is defined in the program and called by
+       ~main()~.
      - The most complex part of the code is explained with a comment.
 *** Additional criteria for level 3
-**** Correctness
+**** Correctness and exception handling
      - The correct working of the program has been documented in /all/
-       possible cases except for the computer running out of memory.
-     - Documentation explains how needed resources are freed when no
-       longer needed.
-**** Readability
+       possible special cases except for the computer running out of
+       memory. That is, your program will never throw an exception.
+**** Resource management
+     - Documentation explains how at least one resource is freed when
+       no longer needed.
+**** Code clarity
      - All non-trivial parts of the code are commented.
      - The role and operation of all functions and/or classes are
        explained in comments.
