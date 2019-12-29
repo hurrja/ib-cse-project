@@ -10,15 +10,15 @@
      - code clarity
      - resource management.
    - Your submission consists of
-     - one file containing documentation
-       - your target grade level (1, 2 or 3)
-       - specification
-       - test case with typical input
-       - explanation of how exceptions and special cases are handled
-         (levels 2 and 3)
-       - explanation of resource handling (level 3)
-     - one ~.java~-file containing the code
-     - possibly one or more text data files needed for the test case.
+     1. one file containing documentation
+        1. your target grade level (1, 2 or 3)
+        2. specification
+        3. test case with typical input
+        4. explanation of how exceptions and special cases are handled
+           (levels 2 and 3)
+        5. explanation of resource handling (level 3)
+     2. one ~.java~-file containing the code
+     3. possibly one or more text data files needed for the test case.
    - Submission is made via email by providing either
      - one ~.zip~-archive containing all files, or
      - a link to a GitHub repository containing all files.
