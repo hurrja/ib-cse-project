@@ -59,7 +59,7 @@
        memory). That is, your program will not throw an exception
        (unless your computer runs out of memory).
 **** Resource management
-     - At least one resource is freed when no longer needed, even in
+     - At least one resource is closed when no longer needed, even in
        the case of an exception. This is also documented.
 **** Code clarity
      - All non-trivial parts of the code are commented.
@@ -67,6 +67,8 @@
        types.
 ** Example project
 *** Documentation
+**** Target assessment level
+     Target assessment level of this work is 3.
 **** Specification
 ***** What does the program do?
       The program
@@ -97,14 +99,35 @@
       the output is
 
       #+RESULTS: run-application
-      : Money Michael  Las Vegas US
-      : Liberite Michael  Paris France
-      : Anonymous Michael  Whereever
-      : Different Firstname  Finland
-      : Doe Jane  Aberdeen Scotland
-      : Some Jane  Missing in action
+      : Money Michael Las Vegas US
+      : Liberite Michael Paris France
+      : Anonymous Michael Whereever
+      : Different Firstname Finland
+      : Doe Jane Aberdeen Scotland
+      : Some Jane Missing in action
 
+***** Exception handling (levels 2 and 3)
+      The following are possible exceptions / special cases and the
+      way they are handled.
+      - More than one program argument. :: Only the first one is used
+        as name of data file.
+      - Reading user-supplied data file name fails. :: Exception is
+        caught and printed to user. Program exits.
+      - Opening data file for reading fails. :: Exception is caught
+        and printed to user. Program exits.
+      - Reading data from data file fails. :: Exception caught and
+        printed, program exits.
+      - Number of persons exceeds program constant. :: Reported to
+        user, program exits.
 
+***** Resource management (level 3)
+      The following resources are opened with ~try~-with-resources
+      -statements and are therefore closed automatically when the
+      program no longer needs them, even in the case of an exception.
+      - ~Scanner~ for system input when reading user-supplied file
+        name.
+      - ~FileReader~ and the associated ~Scanner~ when reading data
+        file.
 
 *** Code
     #+begin_src java :exports code :tangle NamesakeListing.java
