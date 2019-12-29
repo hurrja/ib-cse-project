@@ -77,15 +77,18 @@
       argument or, if none is given, from keyboard.
 
 ***** Data format
-       The input data text file consists of lines, each line containing
-       #+begin_quote
-       lastname firstname address
-       #+end_quote
+       The input data text file consists of lines, each line
+       containing
+       #+begin_center
+       =lastname firstname address=
+       #+end_center
        Both ~lastname~ and ~firstname~ are single words, while
        ~address~ is all the remaining text in the line.
 **** Correctness and exception handling
 ***** Typical test case
-      File [[file:persons.txt]] 
+      File [[file:persons.txt]] contains data from 6 persons with 3 groups
+      of namesakes. The number of persons in these groups is 3
+      (Michael), 2 (Jane) and 1.
 *** Code
     #+begin_src java :exports code :tangle yes
       import java.io.File;
@@ -96,7 +99,7 @@
       {
         public static void main (String[] args)
         {
-          final int MAX_NUM_PERSONS = 10;
+          final int MAX_NUM_PERSONS = 6;
 
           // get name of data file
           String filename;
