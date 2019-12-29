@@ -88,9 +88,21 @@
 ***** Typical test case
       File [[file:persons.txt]] contains data from 6 persons with 3 groups
       of namesakes. The number of persons in these groups is 3
-      (Michael), 2 (Jane) and 1.
+      (Michael), 2 (Jane) and 1. When the program is run with
+      #+begin_src sh :exports code
+      java NamesakeListing.java persons.txt
+      #+end_src
+      the output is
+      #+begin_example
+      Money Michael  Las Vegas US
+      Liberite Michael  Paris France
+      Anonymous Michael  Whereever
+      Different Firstname  Finland
+      Doe Jane  Aberdeen Scotland
+      Some Jane  Missing in action
+      #+end_example
 *** Code
-    #+begin_src java :exports code :tangle yes
+    #+begin_src java :exports code :tangle NamesakeListing.java
       import java.io.File;
       import java.io.FileReader;
       import java.util.Scanner;
