@@ -102,12 +102,12 @@
       consecutive lines:
 
       #+RESULTS: run-application
-      : Money Michael Las Vegas US
-      : Liberite Michael Paris France
-      : Anonymous Michael Whereever
-      : Different Firstname Finland
-      : Doe Jane Aberdeen Scotland
-      : Some Jane Missing in action
+      : Cash Michael Las Vegas, US
+      : Knight Michael Moving truck
+      : Burnham Michael The final frontier
+      : McGyver Agnus Phoenix, Foundation
+      : Doe Jane Aberdeen, Scotland
+      : Tarzan Jane Greystoke, UK
 
 ***** Exception handling (levels 2 and 3)
       The following are all the possible exceptions / special cases
