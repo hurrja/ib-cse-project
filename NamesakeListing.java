@@ -1,4 +1,3 @@
-import java.io.File;
 import java.io.FileReader;
 import java.util.Scanner;
 
@@ -52,8 +51,7 @@ class NamesakeListing
     int numPersons = 0;
 
     // open file and create a scanner for it
-    try (FileReader dataFileReader = new FileReader (new File (filename));
-         Scanner scanner = new Scanner (dataFileReader))
+    try (Scanner scanner = new Scanner (new FileReader (filename)))
     {
       try
       {
