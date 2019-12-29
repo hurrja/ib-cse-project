@@ -41,10 +41,9 @@
        is also documented.
 **** Code clarity
      - Constants are identified and named.
-     - The flow of the program is split into meaningful
-       programmer-defined functions called by ~main()~.
-     - The operation of programmer-defined functions is explained in
-       comments.
+     - The flow of the program is split into meaningful functions
+       called by ~main()~.
+     - The operation of defined functions is explained in comments.
 *** Additional criteria for level 3
 **** Correctness and exception handling
      - The correct working of the program has been documented in all
@@ -56,7 +55,7 @@
        the case of an exception. This is also documented.
 **** Code clarity
      - All non-trivial parts of the code are commented.
-     - If necessary, classes are defined for program-specific data
+     - If appropriate, classes are defined for program-specific data
        types.
 ** Example
 *** Specification
