@@ -138,7 +138,9 @@ class Person
 
   public String toString ()
   {
-    return lastname + " " + firstname + " " + address;
+    // note that address always contains a space at its beginning, so
+    // none needs to be added between firstname and address
+    return lastname + " " + firstname + address;
   }
 
   public String firstname, lastname, address;
