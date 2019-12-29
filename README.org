@@ -20,40 +20,44 @@
 ** Grading levels
 *** Criteria for level 1
 **** Specification
-     - There is a sensible specification of what the program does.
+     - There is a sensible description of what the program does.
      - The program reads some input from user and/or from a text data
        file.
-     - All required text data files, if any, are supplied.
+     - Format of input is explained clearly.
 **** Correctness and exception handling
-     The program works correctly in one documented test case with
-     typical input.
+     - The program works correctly in one documented test case with
+       typical input.
+     - If any text data files are required to test this, they are
+       supplied.
 **** Code clarity
-     - Code is correctly indented.
+     - Code is indented correctly.
      - There is no unnecessary whitespace (no extra empty lines or
        extra spaces).
      - Identifiers (names of variables, constants and functions) are
        meaningful in the context of the program.
 *** Additional criteria for level 2
 **** Correctness and exception handling
-     - At least one exception is caught and reported correctly, and
-       this is documented (explained in document).
+     - At least one exception is caught and reported correctly.  This
+       is also documented.
 **** Code clarity
      - Constants are identified and named.
-     - A meaningful function is defined in the program and called by
-       ~main()~.
-     - The most complex part of the code is explained with a comment.
+     - The flow of the program is split into meaningful
+       programmer-defined functions called by ~main()~.
+     - The operation of programmer-defined functions is explained in
+       comments.
 *** Additional criteria for level 3
 **** Correctness and exception handling
-     - The correct working of the program has been documented in /all/
-       possible special cases except for the computer running out of
-       memory. That is, your program will never throw an exception.
+     - The correct working of the program has been documented in all
+       possible special cases (except for the computer running out of
+       memory). That is, your program will not throw an exception
+       (unless your computer runs out of memory).
 **** Resource management
-     - Documentation explains how at least one resource is freed when
-       no longer needed.
+     - At least one resource is freed when no longer needed, even in
+       the case of an exception. This is also documented.
 **** Code clarity
      - All non-trivial parts of the code are commented.
-     - The role and operation of all functions and/or classes are
-       explained in comments.
+     - If necessary, classes are defined for program-specific data
+       types.
 ** Example
 *** Specification
     - The program
