@@ -89,18 +89,21 @@
       File [[file:persons.txt]] contains data from 6 persons with 3 groups
       of namesakes. The number of persons in these groups is 3
       (Michael), 2 (Jane) and 1. When the program is run with
-      #+begin_src sh :exports code
+      #+name: run-application
+      #+begin_src sh :exports both :cache yes :results output verbatim
       java NamesakeListing.java persons.txt
       #+end_src
+
       the output is
-      #+begin_example
-      Money Michael  Las Vegas US
-      Liberite Michael  Paris France
-      Anonymous Michael  Whereever
-      Different Firstname  Finland
-      Doe Jane  Aberdeen Scotland
-      Some Jane  Missing in action
-      #+end_example
+
+      #+RESULTS[b4156db474e32f93ea042c3aa520add6b196782c]: run-application
+      : Money Michael  Las Vegas US
+      : Liberite Michael  Paris France
+      : Anonymous Michael  Whereever
+      : Different Firstname  Finland
+      : Doe Jane  Aberdeen Scotland
+      : Some Jane  Missing in action
+
 *** Code
     #+begin_src java :exports code :tangle NamesakeListing.java
       import java.io.File;
@@ -243,7 +246,9 @@
 
         public String toString ()
         {
-          return lastname + " " + firstname + " " + address;
+          // note that address always contains a space at its beginning, so
+          // none needs to be added between firstname and address
+          return lastname + " " + firstname + address;
         }
 
         public String firstname, lastname, address;
