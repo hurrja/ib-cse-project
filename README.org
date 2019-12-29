@@ -56,9 +56,8 @@
 *** Specification
     - The program
       1. reads data about persons from a file
-      2. finds persons with identical first names
-      3. prints data of persons with identical names on consecutive
-         rows.
+      2. prints data of persons with identical first names (namesakes)
+         on consecutive rows.
     - The input data text file consists of rows, each row containing
       #+begin_quote
       lastname firstname address
@@ -75,32 +74,44 @@
       {
         public static void main (String[] args)
         {
-          final int MAX_NUM_PERSONS = 1000;
-          String filename;
+          final int MAX_NUM_PERSONS = 10;
 
-          // if the number of arguments is more than 1, we just use the
-          // first one as the filename
+          // get name of data file
+          String filename;
           if (args.length >= 1)
             filename = args [0];
           else
-          {
-            // query filename
-            try (Scanner scanner = new Scanner (System.in))
-            {
-              System.out.print ("give data file name: ");
-              filename = scanner.next ();
-            }
-            catch (Exception e)
-            {
-              System.out.println ("unable to read data file name, exception " + e);
-              return;
-            }
-          }
+            filename = queryFilename ();
 
           // read persons into an array
           Person[] persons = new Person [MAX_NUM_PERSONS];
-          int numPersons = 0;
+          int numPersons = readPersons (filename, persons);
 
+          // list namesakes
+          listNamesakes (persons, numPersons);
+        }
+
+        static String queryFilename ()
+        {
+          String filename;
+          try (Scanner scanner = new Scanner (System.in))
+          {
+            System.out.print ("give data file name: ");
+            filename = scanner.next ();
+          }
+          catch (Exception e)
+          {
+            System.out.println ("unable to read data file name, exception " + e);
+            filename = "";
+            System.exit (-1);
+          }
+
+          return filename;
+        }
+
+        static int readPersons (String filename, Person[] persons)
+        {
+          int numPersons = 0;
           // open file and create a scanner for it
           try (FileReader dataFileReader = new FileReader (new File (filename));
                Scanner scanner = new Scanner (dataFileReader))
@@ -109,10 +120,10 @@
             {
               while (scanner.hasNextLine ())
               {
-                if (numPersons > MAX_NUM_PERSONS)
+                if (numPersons > persons.length)
                 {
-                  System.out.println ("exceeded maximum number of persons " + MAX_NUM_PERSONS);
-                  return;
+                  System.out.println ("exceeded maximum number of persons " + persons.length);
+                  System.exit (-1);
                 }
 
                 String lastname = scanner.next ();
@@ -125,15 +136,20 @@
             catch (Exception e)
             {
               System.out.println ("unable to read person data, exception " + e);
-              return;
+              System.exit (-1);
             }
           }
           catch (Exception e)
           {
             System.out.println ("unable to open file " + filename + " for reading, exception : " + e);
-            return;
+            System.exit (-1);
           }
 
+          return numPersons;
+        }
+
+        static void listNamesakes (Person[] persons, int numPersons)
+        {
           for (int personInd = 0; personInd < numPersons; personInd = personInd + 1)
           {
             Person person = persons [personInd];
@@ -150,9 +166,10 @@
                 }
               }
             }
-          }
+          } 
         }
       }
+
 
       // class containing information of person and converting info to
       // string
@@ -169,7 +186,7 @@
         {
           return firstname.equals (person.firstname);
         }
-  
+
         public String toString ()
         {
           return lastname + " " + firstname + " " + address;
