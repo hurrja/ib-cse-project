@@ -29,7 +29,9 @@
        line, data file and keyboard (user)
      - defines a class and uses it to store and analyze data
      - contains a nested loop (loop within a loop) to process the
-       data.
+       data
+     - uses ~null~ values for object variables to indicate that an
+       object has been processed already.
    - However, it is strongly suggested that you use documentation
      structure similar to the example below, as this will make both
      your and my life a lot easier.
