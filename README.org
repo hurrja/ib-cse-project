@@ -10,7 +10,7 @@
      - code clarity
      - resource management.
    - Your submission consists of
-     1. one file containing documentation
+     1. one *PDF file* containing documentation
         1. your target grade level (1, 2 or 3)
         2. specification
         3. test case with typical input
