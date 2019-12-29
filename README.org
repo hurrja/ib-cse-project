@@ -22,6 +22,9 @@
    - Submission is made via email by providing either
      - one ~.zip~-archive containing all files, or
      - a link to a GitHub repository containing all files.
+   - It is strongly suggested that you use documentation structure
+     similar to the example below, as this will make both your and my
+     life a lot easier.
 ** Grading levels
 *** Criteria for level 1
 **** Specification
@@ -62,18 +65,27 @@
      - All non-trivial parts of the code are commented.
      - If appropriate, classes are defined for program-specific data
        types.
-** Example
-*** Specification
-    - The program
+** Example project
+*** Documentation
+**** Specification
+***** What does the program do?
+      The program
       1. reads data about persons from a file
-      2. prints data of persons with identical first names (namesakes)
-         on consecutive rows.
-    - The input data text file consists of rows, each row containing
-      #+begin_quote
-      lastname firstname address
-      #+end_quote
-    - The user supplies the name of the input file either as a program
-      argument, or if none is given, from keyboard.
+      2. prints all persons in groups with namesakes (same first
+         names) on consecutive lines.
+      The user supplies the name of the input file either as a program
+      argument or, if none is given, from keyboard.
+
+***** Data format
+       The input data text file consists of lines, each line containing
+       #+begin_quote
+       lastname firstname address
+       #+end_quote
+       Both ~lastname~ and ~firstname~ are single words, while
+       ~address~ is all the remaining text in the line.
+**** Correctness and exception handling
+***** Typical test case
+      File [[file:persons.txt]] 
 *** Code
     #+begin_src java :exports code :tangle yes
       import java.io.File;
