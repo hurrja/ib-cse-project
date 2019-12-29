@@ -25,6 +25,14 @@
    - It is strongly suggested that you use documentation structure
      similar to the example below, as this will make both your and my
      life a lot easier.
+   - An example is provided for you below, but your program need not
+     be as complicated. The example below is relatively complicated,
+     because it
+     - is capable of reading input from multiple sources: command
+       line, data file and keyboard (user)
+     - defines a class and uses it to store and analyze data
+     - contains a nested loop (loop within a loop) to process the
+       data.
 ** Grading levels
 *** Criteria for level 1
 **** Specification
