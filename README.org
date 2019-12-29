@@ -90,7 +90,8 @@
 ***** Typical test case
       File [[file:persons.txt]] contains data from 6 persons with 3 groups
       of namesakes. The number of persons in these groups is 3
-      (Michael), 2 (Jane) and 1. When the program is run with
+      (Michael), 2 (Jane) and 1. When the program (file
+      [[file:NamesakeListing.java]]) is run with
       #+name: run-application
       #+begin_src sh :exports both :cache no :results output verbatim
       java NamesakeListing.java persons.txt
@@ -107,18 +108,18 @@
       : Some Jane Missing in action
 
 ***** Exception handling (levels 2 and 3)
-      The following are possible exceptions / special cases and the
-      way they are handled.
-      - More than one program argument. :: Only the first one is used
-        as name of data file.
-      - Reading user-supplied data file name fails. :: Exception is
-        caught and printed to user. Program exits.
-      - Opening data file for reading fails. :: Exception is caught
-        and printed to user. Program exits.
-      - Reading data from data file fails. :: Exception caught and
+      The following are all the possible exceptions / special cases
+      and the way they are handled.
+      - More than one program argument: only the first one is used as
+        name of data file.
+      - Reading user-supplied data file name fails: exception is
+        caught and printed to user, program exits.
+      - Opening data file for reading fails: exception is caught and
+        printed to user, program exits.
+      - Reading data from data file fails: exception caught and
         printed, program exits.
-      - Number of persons exceeds program constant. :: Reported to
-        user, program exits.
+      - Number of persons exceeds program constant: reported to user,
+        program exits.
 
 ***** Resource management (level 3)
       The following resources are opened with ~try~-with-resources
