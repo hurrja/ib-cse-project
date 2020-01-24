@@ -67,9 +67,9 @@
        is also documented.
 **** Code clarity
      - Constants are identified and named.
-     - The flow of the program is split into meaningful functions
-       called by ~main()~.
-     - The role of defined functions is explained in comments.
+     - All non-trivial parts of the code are
+       commented. \ldquo{}Non-trivial\rdquo is defined by assuming
+       that the reader is a fellow student.
 *** Additional criteria for level 3
 **** Correctness and exception handling
      - The correct working of the program has been documented in all
@@ -80,9 +80,9 @@
      - At least one resource is closed when no longer needed, even in
        the case of an exception. This is also documented.
 **** Code clarity
-     - All non-trivial parts of the code are
-       commented. \ldquo{}Non-trivial\rdquo is defined by assuming
-       that the reader is a fellow student.
+     - The flow of the program is split into meaningful functions
+       called by ~main()~.
+     - The role of defined functions is explained in comments.
      - If useful, classes are defined for program-specific data types.
 ** Example project
 *** Documentation
