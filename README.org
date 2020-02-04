@@ -45,11 +45,16 @@
 *** Criteria for level 1
 **** Specification
      - There is a sensible description of what the program does.
-     - The program reads input from user and/or from a text data file
-       and performs a meaningful operation. The input must contain
-       multiple items of data (multiple numbers, or multiple lines of
-       text, or similar).
+     - The program reads input from the user and/or from a text data
+       file and performs a meaningful operation.
      - Format of input is explained clearly.
+     - The input contains multiple items of data (multiple numbers, or
+       multiple lines of text, or similar).
+     - At least some of the data is read from the user or from a file
+       using a loop (~while~, ~for~).
+       - Note: There are /many/ ways to do this. Read multiple lines
+         from a file. Repeat the same operation multiple times for the
+         user. Read multiple lines from user input.
 **** Correctness and exception handling
      - The program works correctly in one documented test case with
        typical input.
