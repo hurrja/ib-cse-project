@@ -82,7 +82,7 @@
        possible special cases (except for the computer running out of
        memory). That is, your program will not throw an exception
        (unless your computer runs out of memory).
-     - Your program does something considerable more complex and/or
+     - Your program does something considerably more complex and/or
        sophisticated that would be required. (In this case, it is
        much more difficult to document correct working in all
        special cases.)
