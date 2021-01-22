@@ -76,11 +76,16 @@
        commented. \ldquo{}Non-trivial\rdquo is defined by assuming
        that the reader is a fellow student.
 *** Additional criteria for level 3
-**** Correctness and exception handling
-     - The correct working of the program has been documented in all
-       possible special cases (except for the computer running out of
-       memory). That is, your program will not throw an exception
-       (unless your computer runs out of memory).
+**** Correctness and exception handling *or* wow-factor
+     - One of the following:
+       - The correct working of the program has been documented in all
+         possible special cases (except for the computer running out of
+         memory). That is, your program will not throw an exception
+         (unless your computer runs out of memory).
+       - Your program does something considerable more complex and/or
+         sophisticated that would be required. (In this case, it is
+         much more difficult to document correct working in all
+         special cases.)
 **** Resource management
      - At least one resource is closed when no longer needed, even in
        the case of an exception. This is also documented.
