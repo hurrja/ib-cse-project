@@ -21,7 +21,7 @@
        object has been processed already.
 
 ** Project deadline
-   The dealine of the project is <2021-01-29 Fri 23:59>.
+   The dealine of the project is <2022-02-04 Fri 23:59>.
 
 ** Project submission
    - Your submission consists of
