@@ -120,10 +120,10 @@
       File [[file:persons.txt]] contains data from 6 persons with 3 groups
       of namesakes. The number of persons in these groups is 3
       (Michael), 2 (Jane) and 1. When the program (file
-      [[file:NamesakeListing.java]]) is run with
+      [[file:Main.java]]) is run with
       #+name: run-application
       #+begin_src sh :exports both :cache no :results output verbatim
-      java NamesakeListing.java persons.txt
+      java Main.java persons.txt
       #+end_src
 
       the output is correct, with each group of namesakes printed on
@@ -160,11 +160,11 @@
       - ~Scanner~ when reading data file.
 
 *** Program code (provided here just for ease of reading, would be a separate file in your submission)
-    #+begin_src java :exports code :tangle NamesakeListing.java
+    #+begin_src java :exports code :tangle Main.java
       import java.io.File;
       import java.util.Scanner;
 
-      class NamesakeListing
+      public class Main
       {
         public static void main (String[] args)
         {
