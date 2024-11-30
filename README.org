@@ -28,10 +28,9 @@
         1. your target grade level (1, 2 or 3)
         2. specification
         3. test case with typical input
-        4. explanation of how exceptions and special cases are handled
-           (levels 2 and 3)
+        4. explanation of input validity is tested (level 2)
         5. explanation of resource handling (level 3)
-     2. one or more ~.java~-files containing the code
+     2. one or more ~.py~-files containing the code
      3. possibly one or more text data files needed for the test case.
    - Submission is made via email by providing either
      - one ~.zip~-archive containing all files as an attachment to the
