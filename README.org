@@ -65,21 +65,32 @@
      - Identifiers (names of variables, functions and classes) are
        meaningful in the context of the program.
 *** Additional criteria for level 2
-**** Testing for valid input
-     - Validity of input is tested in at least one case (for one type
-       of input) This is also documented.
 **** Code clarity
-     - All non-trivial parts of the code are
-       commented. \ldquo{}Non-trivial\rdquo is defined by assuming
-       that the reader is a fellow student.
+     All non-trivial parts of the code are explained in code comments
+     so that any fellow student would understand your
+     code. \ldquo{}Non-trivial\rdquo is therefore defined by assuming
+     that the reader is a fellow student.
+
+     This is a great risk for many students: you will write
+     complicated code or use programming techniques and tools other
+     students are not familiar with, and fail to explain them
+     properly. A new technique is explained properly only if your
+     fellow students would /truly/ understand the technique. This
+     requirement is much more difficult to fulfill than you might
+     think.
+
+     By far the easiest way to tackle this risk is to only use
+     techniques covered on this course. Otherwise, to reach level 2,
+     you may spend 30 minutes incorporating a new technique into your
+     program and then 5 hours trying to come up with an explanation a
+     fellow student would understand.
+**** Resource management
+     Opened resources are closed when no longer needed. This is also
+     documented.
 *** Additional criteria for level 3
 **** Code clarity
      - The flow of the program is split into meaningful functions.
      - The role of defined functions is explained in docstrings.
-     - If useful, classes are defined for program-specific data types.
-**** Resource management
-     - Opened resources are closed when no longer needed. This is also
-       documented.
 ** Example project
 *** Documentation
 **** Target assessment level
@@ -117,12 +128,7 @@
         Tarzan Jane Greystoke, UK
       #+end_example
 
-**** Testing for valid input (level 2)
-     When user gives path to text file, the program tests whether the
-     file exists. If the file does not exits, the user is prompted to
-     input another path.
-
-**** Resource management (level 3)
+**** Resource management (level 2)
      The input file is opened using a =with=-statement, and will
      therefore be closed automatically.
 
