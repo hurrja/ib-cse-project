@@ -8,7 +8,6 @@
      - specification
      - correctness
      - code clarity
-     - testing for valid input
      - resource management.
    - An example is provided for you below, but your program need not
      be as complicated. The example below is relatively complicated,
