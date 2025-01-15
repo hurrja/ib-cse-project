@@ -32,7 +32,8 @@
         - if your program uses any libraries / modules you needed to
           install yourself, your submission /must/ also contain file
           =requirements.txt=
-          - if you do not know what this means, do a search
+          - if you do not know what this means, do a web search with
+            keywords
             #+begin_example
             pip freeze requirements.txt
             #+end_example
