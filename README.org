@@ -29,6 +29,15 @@
         3. test case with typical input
         4. explanation of resource handling (level 2)
      2. one or more ~.py~-files containing the code
+        - if your program uses any libraries / modules you needed to
+          install yourself, your submission /must/ also contain file
+          =requirements.txt=
+          - if you do not know what this means, do a search
+            #+begin_example
+            pip freeze requirements.txt
+            #+end_example
+            or see
+            e.g. [[https://www.jetbrains.com/help/pycharm/managing-dependencies.html]]
      3. possibly one or more text data files needed for the test case.
    - Submission is made via email by providing either
      - one ~.zip~-archive containing all files as an attachment to the
@@ -57,6 +66,8 @@
        typical input.
      - If any text data files are required to test this, they are
        supplied.
+     - If any external libraries / modules are used, file
+       =requirements.txt= is also supplied.
 **** Code clarity
      - There is no unnecessary whitespace (no extra empty lines or
        extra spaces).
