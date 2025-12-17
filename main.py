@@ -47,10 +47,10 @@ def read_persons(filename):
     with open(filename) as f:
         for line in f:
             words = line.split()
-            lastname = words [0]
-            firstname = words [1]
+            lastname = words[0]
+            firstname = words[1]
             # address is everything from 3rd word; these are joined into single string
-            address = str.join(' ', words [2:]) 
+            address = str.join(' ', words[2:])
             persons.append(Person(lastname, firstname, address))
 
     return persons
@@ -69,10 +69,10 @@ def print_namesakes(persons):
             print(person)
             # traverse the rest of the list, looking for namesakes
             for j in range(index + 1, num_persons):
-                candidate = persons [j]
+                candidate = persons[j]
                 if candidate != None and person.is_namesake(candidate):
                     print(candidate)
-                    persons [j] = None # mark this person as printed
+                    persons[j] = None # mark this person as printed
 
 filename = prompt_filename()
 persons = read_persons(filename)
