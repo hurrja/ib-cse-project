@@ -42,8 +42,6 @@
             #+begin_example
             pip freeze requirements.txt
             #+end_example
-            or see
-            e.g. [[https://www.jetbrains.com/help/pycharm/managing-dependencies.html]]
      3. possibly one or more text data files needed for the test case.
    - It is strongly suggested that you use documentation structure
      similar to the example below, as this will make both your and my
