@@ -19,10 +19,15 @@
        processed.
 
 ** Project deadline
-   The dealine of the project is <2025-01-31 Fri 23:59>.
+   The dealine of the project is <2026-01-30 Fri 23:59>.
 
 ** Project submission
-   - Your submission consists of
+   - Submission is made via email by providing either
+     - one ~.zip~-archive containing all files as an attachment to the
+       email, or
+     - a link to a GitHub repository containing all files.
+   - The ~zip~-archive (or GitHub repository) in your submission
+     contains
      1. one *PDF file* containing documentation
         1. your target grade level (1, 2 or 3)
         2. specification
@@ -40,10 +45,6 @@
             or see
             e.g. [[https://www.jetbrains.com/help/pycharm/managing-dependencies.html]]
      3. possibly one or more text data files needed for the test case.
-   - Submission is made via email by providing either
-     - one ~.zip~-archive containing all files as an attachment to the
-       email, or
-     - a link to a GitHub repository containing all files.
    - It is strongly suggested that you use documentation structure
      similar to the example below, as this will make both your and my
      life a lot easier.
@@ -58,7 +59,7 @@
      - The input contains multiple items of data (multiple numbers, or
        multiple lines of text, or similar).
      - At least some of the data is read from the user or from a file
-       using a loop (~while~, ~for~).
+       using a loop (~for~, ~while~).
        - Note: There are /many/ ways to do this. Read multiple lines
          from a file. Repeat the same operation multiple times for the
          user. Read multiple lines from user input.
